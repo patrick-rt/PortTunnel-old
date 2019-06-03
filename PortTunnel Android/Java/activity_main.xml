@@ -1,0 +1,192 @@
+<!--
+MIT License
+Copyright (c) 2019 Patrick72762
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<LinearLayout
+		android:orientation="horizontal"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/linearLayout1" >
+		<TextView
+			android:text="Connection 1:"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="110dp"
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:layout_weight="0"
+			android:id="@+id/textView1"
+			android:layout_marginLeft="10dp" />
+		<EditText
+			android:inputType="textPersonName"
+			android:layout_width="fill_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:id="@+id/etHost1"
+			android:hint="Hostname"
+			android:layout_marginLeft="10dp"/>
+		<EditText
+			android:inputType="number"
+			android:layout_width="70dp"
+			android:layout_height="match_parent"
+			android:layout_weight="0"
+			android:id="@+id/etPort1"
+			android:hint="Port" 
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"/>
+	</LinearLayout>
+	<LinearLayout
+		android:orientation="horizontal"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:id="@+id/linearLayout2">
+		<TextView
+			android:text="Connection 2:"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="110dp"
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:layout_weight="0"
+			android:id="@+id/textView2"
+			android:layout_marginLeft="10dp" />
+		<EditText
+			android:inputType="textPersonName"
+			android:layout_width="fill_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:id="@+id/etHost2"
+			android:hint="Hostname"
+			android:layout_marginLeft="10dp" />
+		<EditText
+			android:inputType="number"
+			android:layout_width="70dp"
+			android:layout_height="match_parent"
+			android:layout_weight="0"
+			android:id="@+id/etPort2"
+			android:hint="Port" 
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"/>
+	</LinearLayout>
+	<LinearLayout
+		android:orientation="horizontal"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:id="@+id/linearLayout3">
+		<TextView
+			android:text="ControlPort:"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="110dp"
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:layout_weight="0"
+			android:id="@+id/textView4"
+			android:layout_marginLeft="10dp" />
+		<EditText
+			android:inputType="number"
+			android:layout_width="70dp"
+			android:layout_height="match_parent"
+			android:layout_weight="0"
+			android:id="@+id/etControlPort"
+			android:hint="Port" 
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"/>
+		<CheckBox
+			android:text="HTTP"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:id="@+id/cbHttp"
+			android:layout_marginRight="30dp" />
+	</LinearLayout>
+	<LinearLayout
+		android:orientation="horizontal"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:id="@+id/linearLayout4">
+		<TextView
+			android:text="Timeout:"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="110dp"
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:layout_weight="0"
+			android:id="@+id/textView3"
+			android:layout_marginLeft="10dp" />
+		<EditText
+			android:inputType="number"
+			android:layout_width="70dp"
+			android:layout_height="match_parent"
+			android:layout_weight="0"
+			android:id="@+id/etTimeout"
+			android:hint="ms" 
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"/>
+		<CheckBox
+			android:text="SSL"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:id="@+id/cbSsl"
+			android:layout_marginRight="30dp"/>
+		<TextView
+			android:text="0"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:id="@+id/txtActiveConnections"
+			android:layout_marginTop="0.0dp" />
+	</LinearLayout>
+	<LinearLayout
+		android:orientation="horizontal"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/linearLayout5" >
+		<Button
+			android:text="Start"
+			android:layout_width="0dip"
+			android:layout_weight="0.5"
+			android:layout_height="match_parent"
+			android:id="@+id/btnStart" />
+		<Button
+			android:text="Close"
+			android:layout_width="0dip"
+			android:layout_weight="0.5"
+			android:layout_height="match_parent"
+			android:id="@+id/btnStop" />
+	</LinearLayout>
+	<ScrollView
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="fill_parent"
+		android:id="@+id/scrollView1" >
+		<TextView
+			android:text=""
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/txtLog" />
+	</ScrollView>
+</LinearLayout>
