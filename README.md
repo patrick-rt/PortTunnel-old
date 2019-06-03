@@ -2,20 +2,27 @@
 
 # PortTunnel Help
 ## DESCRIPTION
-Creates a "tunnel" through a firewall by
-using an external server
+Creates a "tunnel" through a firewall using an external server
 
 ## ARGUMENTS
--m [sc|cc|ss] - Mode (ServerClient, ClientClient,
- ServerServer)
+-m [sc|cc|ss] - Mode (ServerClient, ClientClient, ServerServer)
+
 -h1 [HOST] - Hostname 1
+
 -h2 [HOST] - Hostname 2
+
 -p1 [PORT] - Port 1
+
 -p2 [PORT] - Port 2
+
 -cp [PORT] - Control-Port
+
 -t [ms] - Timeout in ms
+
 -http - Replace HTTP Host-Header
+
 -ssl - Destination needs SSL
+
 -log - Log all Bytes of each Stream
 
 ## VARIABLES:
